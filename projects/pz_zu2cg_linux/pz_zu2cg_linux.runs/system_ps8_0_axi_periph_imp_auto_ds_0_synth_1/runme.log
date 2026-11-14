@@ -1,0 +1,391 @@
+
+*** Running vivado
+    with args -log system_ps8_0_axi_periph_imp_auto_ds_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_ps8_0_axi_periph_imp_auto_ds_0.tcl
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 18-oct-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Fri Nov 13 23:45:21 2026
+# Process ID         : 26233
+# Current directory  : /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/system_ps8_0_axi_periph_imp_auto_ds_0_synth_1
+# Command line       : vivado -log system_ps8_0_axi_periph_imp_auto_ds_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_ps8_0_axi_periph_imp_auto_ds_0.tcl
+# Log file           : /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/system_ps8_0_axi_periph_imp_auto_ds_0_synth_1/system_ps8_0_axi_periph_imp_auto_ds_0.vds
+# Journal file       : /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/system_ps8_0_axi_periph_imp_auto_ds_0_synth_1/vivado.jou
+# Running On         : scimos-System-Product-Name
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D 16-Core Processor
+# CPU Frequency      : 5537.132 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 63572 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 72162 MB
+# Available Virtual  : 65716 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Fri Nov 13 23:45:21 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_ps8_0_axi_periph_imp_auto_ds_0.tcl -notrace
+Command: synth_design -top system_ps8_0_axi_periph_imp_auto_ds_0 -part xczu2cg-sfvc784-2-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xczu2cg'
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-2-i
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26294
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2848.895 ; gain = 161.766 ; free physical = 44682 ; free virtual = 59151
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_ps8_0_axi_periph_imp_auto_ds_0' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_0/synth/system_ps8_0_axi_periph_imp_auto_ds_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_top' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14527]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_axi_downsizer' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2374]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_b_downsizer' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1248]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_b_downsizer' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1248]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_a_downsizer' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/opt/xilinx/2026.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [/opt/xilinx/2026.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo__parameterized0' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen__parameterized0' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_fifo_gen__parameterized0' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_37_axic_fifo__parameterized0' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/a62a/hdl/axi_data_fifo_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_a_downsizer' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_w_downsizer' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2011]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_w_downsizer' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2011]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_a_downsizer__parameterized0' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_a_downsizer__parameterized0' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_38_r_downsizer' [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1529]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_r_downsizer' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1529]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_axi_downsizer' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:2374]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_38_top' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14527]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps8_0_axi_periph_imp_auto_ds_0' (0#1) [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_0/synth/system_ps8_0_axi_periph_imp_auto_ds_0.v:53]
+INFO: [Synth 8-6014] Unused sequential element cmd_empty_reg was removed.  [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1052]
+INFO: [Synth 8-6014] Unused sequential element cmd_depth_reg was removed.  [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1053]
+INFO: [Synth 8-6014] Unused sequential element cmd_b_push_block_reg was removed.  [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ipshared/8ebb/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:975]
+INFO: [Synth 8-7129] Port ALMOST_FULL_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_EMPTY_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_ACK_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port VALID_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port OVERFLOW_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port UNDERFLOW_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[5] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[4] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[3] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[2] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[1] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DATA_COUNT_I[0] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[5] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[4] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[3] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[2] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[1] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_DATA_COUNT_I[0] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[5] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[4] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[3] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[2] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[1] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_DATA_COUNT_I[0] in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SBITERR_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DBITERR_I in module output_blk__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST_FULL_FF in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_RST in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SAFETY_CKT_WR_RST in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[4] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[3] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[2] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[1] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS2[0] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[4] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[3] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[2] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[1] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS3[0] in module wr_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module wr_bin_cntr is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_EN_INTO_LOGIC in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_RST_INTO_LOGIC in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_EN in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_RST_BUSY in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port EMPTY in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_EMPTY in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[4] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[3] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[2] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[1] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH[0] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[4] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[3] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[2] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[1] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[0] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[4] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[3] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[2] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[1] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[0] in module wr_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module rd_fwft is either unconnected or has no load
+INFO: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_fwft is either unconnected or has no load
+INFO: [Synth 8-7129] Port RAM_ALMOST_EMPTY in module rd_fwft is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SAFETY_CKT_RD_RST in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[4] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[3] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[2] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[1] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_PNTR_PLUS2[0] in module rd_status_flags_ss is either unconnected or has no load
+INFO: [Synth 8-7129] Port SRST in module rd_bin_cntr is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_EN_INTO_LOGIC in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_RST_INTO_LOGIC in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port RD_RST_BUSY in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port RST_FULL_FF in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port ALMOST_FULL_FB in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port FULL in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[4] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[3] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[2] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[1] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port WR_PNTR_PLUS1_RD[0] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[4] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[3] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[2] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[1] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH[0] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[4] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[3] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[2] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[1] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_ASSERT[0] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_NEGATE[4] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_NEGATE[3] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_NEGATE[2] in module rd_logic is either unconnected or has no load
+INFO: [Synth 8-7129] Port PROG_EMPTY_THRESH_NEGATE[1] in module rd_logic is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3064.832 ; gain = 377.703 ; free physical = 44168 ; free virtual = 58642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3064.832 ; gain = 377.703 ; free physical = 44168 ; free virtual = 58642
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3064.832 ; gain = 377.703 ; free physical = 44168 ; free virtual = 58642
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3064.832 ; gain = 0.000 ; free physical = 44168 ; free virtual = 58642
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_0/system_ps8_0_axi_periph_imp_auto_ds_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_0/system_ps8_0_axi_periph_imp_auto_ds_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/system_ps8_0_axi_periph_imp_auto_ds_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/system_ps8_0_axi_periph_imp_auto_ds_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-1714] 3 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3104.852 ; gain = 0.000 ; free physical = 44148 ; free virtual = 58633
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3104.887 ; gain = 0.000 ; free physical = 44148 ; free virtual = 58633
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3104.887 ; gain = 417.758 ; free physical = 44170 ; free virtual = 58656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu2cg-sfvc784-2-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3112.855 ; gain = 425.727 ; free physical = 44170 ; free virtual = 58656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3112.855 ; gain = 425.727 ; free physical = 44170 ; free virtual = 58656
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
+INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               10 |                               10
+       both_stages_valid |                               11 |                               11
+            stage2_valid |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3112.855 ; gain = 425.727 ; free physical = 44153 ; free virtual = 58641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:72)
+BRAMs: 300 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-12589] Found 1 bits of RAM  (inst/\gen_downsizer.gen_simple_downsizer.axi_downsizer_inst/USE_WRITE.write_addr_inst/cmd_queue/inst/fifo_gen_inst /i_3) with no load. RAM width may be reduced from 29 to 28 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 3112.855 ; gain = 425.727 ; free physical = 43915 ; free virtual = 58452
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3681.266 ; gain = 994.137 ; free physical = 43054 ; free virtual = 57594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3784.703 ; gain = 1097.574 ; free physical = 43004 ; free virtual = 57548
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3792.711 ; gain = 1105.582 ; free physical = 42993 ; free virtual = 57535
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3948.523 ; gain = 1261.395 ; free physical = 45150 ; free virtual = 59693
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3948.523 ; gain = 1261.395 ; free physical = 45150 ; free virtual = 59693
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3948.523 ; gain = 1261.395 ; free physical = 45150 ; free virtual = 59693
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3948.523 ; gain = 1261.395 ; free physical = 45150 ; free virtual = 59693
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3948.523 ; gain = 1261.395 ; free physical = 45150 ; free virtual = 59693
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3948.523 ; gain = 1261.395 ; free physical = 45150 ; free virtual = 59693
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY8   |     8|
+|2     |LUT1     |    49|
+|3     |LUT2     |    85|
+|4     |LUT3     |    81|
+|5     |LUT4     |    76|
+|6     |LUT5     |   259|
+|7     |LUT6     |   388|
+|8     |RAM32M   |     1|
+|9     |RAM32M16 |     4|
+|10    |RAM32X1D |     1|
+|11    |FDCE     |    69|
+|12    |FDPE     |    33|
+|13    |FDRE     |   809|
+|14    |FDSE     |     5|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3948.523 ; gain = 1261.395 ; free physical = 45150 ; free virtual = 59693
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3948.523 ; gain = 1221.340 ; free physical = 45024 ; free virtual = 59567
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 3948.523 ; gain = 1261.395 ; free physical = 45024 ; free virtual = 59567
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3948.523 ; gain = 0.000 ; free physical = 45147 ; free virtual = 59690
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3948.523 ; gain = 0.000 ; free physical = 45020 ; free virtual = 59563
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 4 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+
+Synth Design complete | Checksum: e27a0c2d
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+151 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 3948.523 ; gain = 2179.488 ; free physical = 45530 ; free virtual = 60074
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2912.699; main = 2912.699; forked = 242.411
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4811.535; main = 3922.566; forked = 1038.953
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3948.523 ; gain = 0.000 ; free physical = 45530 ; free virtual = 60075
+INFO: [Common 17-1381] The checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/system_ps8_0_axi_periph_imp_auto_ds_0_synth_1/system_ps8_0_axi_periph_imp_auto_ds_0.dcp' has been generated.
+INFO: [Ipptcl 7-1612] Added synthesis output to IP cache for IP system_ps8_0_axi_periph_imp_auto_ds_0, cache-ID = c6787c003fcb5255
+INFO: [Coretcl 2-1174] Renamed 58 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3948.523 ; gain = 0.000 ; free physical = 45472 ; free virtual = 60020
+INFO: [Common 17-1381] The checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/system_ps8_0_axi_periph_imp_auto_ds_0_synth_1/system_ps8_0_axi_periph_imp_auto_ds_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_ps8_0_axi_periph_imp_auto_ds_0_utilization_synth.rpt -pb system_ps8_0_axi_periph_imp_auto_ds_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 13 23:45:51 2026...

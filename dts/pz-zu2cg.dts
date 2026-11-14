@@ -1,0 +1,19 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Puzhi PZ-ZU2CG running the Linux reference design (scripts/create_linux_project.tcl):
+ * PS peripherals plus the PL peripherals of that bitstream. The bitstream must be
+ * loaded before Linux starts (U-Boot does it, see buildroot/board/pz_zu2cg).
+ */
+
+/dts-v1/;
+
+#include "pz-zu2cg-ps.dtsi"
+#include "pz_zu2cg_pl.dtsi"
+#include "pz_zu2cg_board.dtsi"
+
+/ {
+	aliases {
+		ethernet1 = &gem1;
+		i2c0 = &axi_iic_eeprom;
+	};
+};

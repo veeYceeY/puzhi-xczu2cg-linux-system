@@ -1,0 +1,1099 @@
+
+*** Running vivado
+    with args -log system_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 18-oct-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Fri Nov 13 23:50:42 2026
+# Process ID         : 35669
+# Current directory  : /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1
+# Command line       : vivado -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
+# Log file           : /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1/system_wrapper.vdi
+# Journal file       : /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1/vivado.jou
+# Running On         : scimos-System-Product-Name
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D 16-Core Processor
+# CPU Frequency      : 5546.515 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 63572 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 72162 MB
+# Available Virtual  : 65653 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Fri Nov 13 23:50:42 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/2026.1/data/ip'.
+Command: link_design -top system_wrapper -part xczu2cg-sfvc784-2-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-2-i
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_axi_iic_eeprom_0/system_axi_iic_eeprom_0.dcp' for cell 'system_i/axi_iic_eeprom'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/system_ddr4_0_0.dcp' for cell 'system_i/ddr4_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/system_gmii_to_rgmii_0_0.dcp' for cell 'system_i/gmii_to_rgmii_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_j19_0/system_gpio_j19_0.dcp' for cell 'system_i/gpio_j19'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_j20_0/system_gpio_j20_0.dcp' for cell 'system_i/gpio_j20'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_jm1_0/system_gpio_jm1_0.dcp' for cell 'system_i/gpio_jm1'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_key_0/system_gpio_key_0.dcp' for cell 'system_i/gpio_key'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_led_0/system_gpio_led_0.dcp' for cell 'system_i/gpio_led'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_led_core_0/system_gpio_led_core_0.dcp' for cell 'system_i/gpio_led_core'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_rst_ddr4_0_300M_0/system_rst_ddr4_0_300M_0.dcp' for cell 'system_i/rst_ddr4_0_300M'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_rst_pl_clk1_375M_0/system_rst_pl_clk1_375M_0.dcp' for cell 'system_i/rst_pl_clk1_375M'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0.dcp' for cell 'system_i/rst_ps8_0_99M'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.dcp' for cell 'system_i/zynq_ultra_ps_e_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_xbar_0/system_ps8_0_axi_periph_imp_xbar_0.dcp' for cell 'system_i/ps8_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_0/system_ps8_0_axi_periph_imp_auto_ds_0.dcp' for cell 'system_i/ps8_0_axi_periph/m00_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_pc_0/system_ps8_0_axi_periph_imp_auto_pc_0.dcp' for cell 'system_i/ps8_0_axi_periph/m00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_1/system_ps8_0_axi_periph_imp_auto_ds_1.dcp' for cell 'system_i/ps8_0_axi_periph/m01_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_pc_1/system_ps8_0_axi_periph_imp_auto_pc_1.dcp' for cell 'system_i/ps8_0_axi_periph/m01_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_2/system_ps8_0_axi_periph_imp_auto_ds_2.dcp' for cell 'system_i/ps8_0_axi_periph/m02_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_pc_2/system_ps8_0_axi_periph_imp_auto_pc_2.dcp' for cell 'system_i/ps8_0_axi_periph/m02_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_3/system_ps8_0_axi_periph_imp_auto_ds_3.dcp' for cell 'system_i/ps8_0_axi_periph/m03_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_pc_3/system_ps8_0_axi_periph_imp_auto_pc_3.dcp' for cell 'system_i/ps8_0_axi_periph/m03_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_4/system_ps8_0_axi_periph_imp_auto_ds_4.dcp' for cell 'system_i/ps8_0_axi_periph/m04_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_pc_4/system_ps8_0_axi_periph_imp_auto_pc_4.dcp' for cell 'system_i/ps8_0_axi_periph/m04_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_5/system_ps8_0_axi_periph_imp_auto_ds_5.dcp' for cell 'system_i/ps8_0_axi_periph/m05_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_pc_5/system_ps8_0_axi_periph_imp_auto_pc_5.dcp' for cell 'system_i/ps8_0_axi_periph/m05_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_6/system_ps8_0_axi_periph_imp_auto_ds_6.dcp' for cell 'system_i/ps8_0_axi_periph/m06_couplers/auto_ds'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_pc_6/system_ps8_0_axi_periph_imp_auto_pc_6.dcp' for cell 'system_i/ps8_0_axi_periph/m06_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_cc_0/system_ps8_0_axi_periph_imp_auto_cc_0.dcp' for cell 'system_i/ps8_0_axi_periph/m07_couplers/auto_cc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2744.984 ; gain = 0.000 ; free physical = 46533 ; free virtual = 61247
+INFO: [Netlist 29-17] Analyzing 664 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: system_i/ddr4_0 UUID: 0e012655-14fd-5f1f-8729-eff94e0b36e7 
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.xdc] for cell 'system_i/zynq_ultra_ps_e_0/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0.xdc] for cell 'system_i/zynq_ultra_ps_e_0/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_led_0/system_gpio_led_0_board.xdc] for cell 'system_i/gpio_led/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_led_0/system_gpio_led_0_board.xdc] for cell 'system_i/gpio_led/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_led_core_0/system_gpio_led_core_0_board.xdc] for cell 'system_i/gpio_led_core/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_led_core_0/system_gpio_led_core_0_board.xdc] for cell 'system_i/gpio_led_core/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_key_0/system_gpio_key_0_board.xdc] for cell 'system_i/gpio_key/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_key_0/system_gpio_key_0_board.xdc] for cell 'system_i/gpio_key/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_axi_iic_eeprom_0/system_axi_iic_eeprom_0_board.xdc] for cell 'system_i/axi_iic_eeprom/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_axi_iic_eeprom_0/system_axi_iic_eeprom_0_board.xdc] for cell 'system_i/axi_iic_eeprom/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:37]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.No_MUL64.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:37]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc:37]
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_0/bd_031c_microblaze_I_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_1/bd_031c_rst_0_0_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_1/bd_031c_rst_0_0_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/rst_0/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_2/bd_031c_ilmb_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_2/bd_031c_ilmb_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/ilmb/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_3/bd_031c_dlmb_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_3/bd_031c_dlmb_0.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/dlmb/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_10/bd_031c_iomodule_0_0_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/bd_0/ip/ip_10/bd_031c_iomodule_0_0_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst/iomodule_0/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/ip_0/system_ddr4_0_0_microblaze_mcs_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/ip_0/system_ddr4_0_0_microblaze_mcs_board.xdc] for cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/par/system_ddr4_0_0.xdc] for cell 'system_i/ddr4_0/inst'
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'CLKC-55' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/par/system_ddr4_0_0.xdc:175]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'CLKC-56' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/par/system_ddr4_0_0.xdc:176]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'CLKC-40' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/par/system_ddr4_0_0.xdc:179]
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/par/system_ddr4_0_0.xdc] for cell 'system_i/ddr4_0/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_jm1_0/system_gpio_jm1_0_board.xdc] for cell 'system_i/gpio_jm1/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_jm1_0/system_gpio_jm1_0_board.xdc] for cell 'system_i/gpio_jm1/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_j19_0/system_gpio_j19_0_board.xdc] for cell 'system_i/gpio_j19/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_j19_0/system_gpio_j19_0_board.xdc] for cell 'system_i/gpio_j19/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_j20_0/system_gpio_j20_0_board.xdc] for cell 'system_i/gpio_j20/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gpio_j20_0/system_gpio_j20_0_board.xdc] for cell 'system_i/gpio_j20/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0_board.xdc] for cell 'system_i/rst_ps8_0_99M/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_rst_ps8_0_99M_0/system_rst_ps8_0_99M_0_board.xdc] for cell 'system_i/rst_ps8_0_99M/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_rst_ddr4_0_300M_0/system_rst_ddr4_0_300M_0_board.xdc] for cell 'system_i/rst_ddr4_0_300M/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_rst_ddr4_0_300M_0/system_rst_ddr4_0_300M_0_board.xdc] for cell 'system_i/rst_ddr4_0_300M/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0.xdc] for cell 'system_i/gmii_to_rgmii_0/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0.xdc] for cell 'system_i/gmii_to_rgmii_0/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_rst_pl_clk1_375M_0/system_rst_pl_clk1_375M_0_board.xdc] for cell 'system_i/rst_pl_clk1_375M/U0'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_rst_pl_clk1_375M_0/system_rst_pl_clk1_375M_0_board.xdc] for cell 'system_i/rst_pl_clk1_375M/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.xdc]
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.xdc]
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/system_ddr4_0_0_board.xdc] for cell 'system_i/ddr4_0/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/system_ddr4_0_0_board.xdc] for cell 'system_i/ddr4_0/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_0/system_ps8_0_axi_periph_imp_auto_ds_0_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m00_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_0/system_ps8_0_axi_periph_imp_auto_ds_0_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m00_couplers/auto_ds/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_1/system_ps8_0_axi_periph_imp_auto_ds_1_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_1/system_ps8_0_axi_periph_imp_auto_ds_1_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m01_couplers/auto_ds/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_2/system_ps8_0_axi_periph_imp_auto_ds_2_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_2/system_ps8_0_axi_periph_imp_auto_ds_2_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m02_couplers/auto_ds/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_3/system_ps8_0_axi_periph_imp_auto_ds_3_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_3/system_ps8_0_axi_periph_imp_auto_ds_3_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m03_couplers/auto_ds/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_4/system_ps8_0_axi_periph_imp_auto_ds_4_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_4/system_ps8_0_axi_periph_imp_auto_ds_4_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m04_couplers/auto_ds/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_5/system_ps8_0_axi_periph_imp_auto_ds_5_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_5/system_ps8_0_axi_periph_imp_auto_ds_5_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m05_couplers/auto_ds/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_6/system_ps8_0_axi_periph_imp_auto_ds_6_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst'
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_ds_6/system_ps8_0_axi_periph_imp_auto_ds_6_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m06_couplers/auto_ds/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_cc_0/system_ps8_0_axi_periph_imp_auto_cc_0_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m07_couplers/auto_cc/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_cc_0/system_ps8_0_axi_periph_imp_auto_cc_0_clocks.xdc:16]
+INFO: [Timing 38-2] Deriving generated clocks [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_cc_0/system_ps8_0_axi_periph_imp_auto_cc_0_clocks.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'LUTAR-1' object list specifies likely unusable hierarchical instance 'system_i/ps8_0_axi_periph/m07_couplers/auto_cc/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_cc_0/system_ps8_0_axi_periph_imp_auto_cc_0_clocks.xdc:30]
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ps8_0_axi_periph_imp_auto_cc_0/system_ps8_0_axi_periph_imp_auto_cc_0_clocks.xdc] for cell 'system_i/ps8_0_axi_periph/m07_couplers/auto_cc/inst'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc] for cell 'system_i/gmii_to_rgmii_0/U0'
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -include_generated_clocks -of [get_ports rgmii_rxc]'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:4]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:4]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'system_gmii_to_rgmii_0_0_rgmii_rx_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:7]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks [get_clocks -include_generated_clocks -of [get_ports rgmii_rxc]]'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:20]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:20]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -include_generated_clocks -of [get_ports rgmii_rxc]'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:41]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:41]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -include_generated_clocks -of_objects [get_ports gmii_clk]'. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:43]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:43]
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc] for cell 'system_i/gmii_to_rgmii_0/U0'
+Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux_timing.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk_pl_1' already exists, overwriting the previous clock with the same name. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux_timing.xdc:2]
+Finished Parsing XDC File [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux_timing.xdc]
+INFO: [Project 1-1714] 71 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'system_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/sw/calibration_0/Debug/calibration_ddr.elf 
+INFO: [Project 1-1687] 10 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3611.320 ; gain = 0.000 ; free physical = 45837 ; free virtual = 60554
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 335 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 3 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 14 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 115 instances
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT(x2)): 2 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 18 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 31 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF(x2)): 1 instance 
+  OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFT(x2)): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 77 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 64 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 7 instances
+
+51 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 3611.355 ; gain = 1829.449 ; free physical = 45837 ; free virtual = 60554
+Command: opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.31 . Memory (MB): peak = 3625.195 ; gain = 13.840 ; free physical = 45821 ; free virtual = 60538
+
+Starting Cache Timing Information Task
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'system_gmii_to_rgmii_0_0_rgmii_rx_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:7]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 2b16bcfdf
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.98 . Memory (MB): peak = 3625.195 ; gain = 0.000 ; free physical = 45823 ; free virtual = 60541
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+
+Phase 1.1.1 Generate And Synthesize MIG Cores
+INFO: [IP_Flow 19-5647] Added synthesis output to IP cache for IP system_ddr4_0_0_phy, cache-ID = 7d0e3e53d944999b
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4085.840 ; gain = 0.000 ; free physical = 45369 ; free virtual = 60102
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4085.840 ; gain = 0.000 ; free physical = 45369 ; free virtual = 60102
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4085.840 ; gain = 0.000 ; free physical = 45400 ; free virtual = 60120
+Phase 1.1.1 Generate And Synthesize MIG Cores | Checksum: 19b23106f
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:27 . Memory (MB): peak = 4085.840 ; gain = 63.730 ; free physical = 45400 ; free virtual = 60120
+
+Phase 1.1.2 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4106.617 ; gain = 0.000 ; free physical = 45379 ; free virtual = 60121
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4106.617 ; gain = 0.000 ; free physical = 45381 ; free virtual = 60123
+Phase 1.1.2 Generate And Synthesize Debug Cores | Checksum: 263a38d60
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:57 . Memory (MB): peak = 4106.617 ; gain = 84.508 ; free physical = 45381 ; free virtual = 60123
+Phase 1.1 Core Generation And Design Setup | Checksum: 263a38d60
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:57 . Memory (MB): peak = 4106.617 ; gain = 84.508 ; free physical = 45381 ; free virtual = 60123
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 263a38d60
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:57 . Memory (MB): peak = 4106.617 ; gain = 84.508 ; free physical = 45381 ; free virtual = 60123
+Phase 1 Initialization | Checksum: 263a38d60
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:57 . Memory (MB): peak = 4106.617 ; gain = 84.508 ; free physical = 45381 ; free virtual = 60123
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 263a38d60
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:57 . Memory (MB): peak = 4122.617 ; gain = 100.508 ; free physical = 45365 ; free virtual = 60107
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 263a38d60
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:57 . Memory (MB): peak = 4122.617 ; gain = 100.508 ; free physical = 45365 ; free virtual = 60107
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 263a38d60
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:57 . Memory (MB): peak = 4122.617 ; gain = 100.508 ; free physical = 45365 ; free virtual = 60107
+Phase 2 Timer Update And Timing Data Collection | Checksum: 263a38d60
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:57 . Memory (MB): peak = 4122.617 ; gain = 100.508 ; free physical = 45365 ; free virtual = 60107
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 21 inverters resulting in an inversion of 180 pins
+INFO: [Opt 31-138] Pushed 43 inverter(s) to 3773 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 1f0f8d920
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:58 . Memory (MB): peak = 4122.617 ; gain = 100.508 ; free physical = 45365 ; free virtual = 60107
+Retarget | Checksum: 1f0f8d920
+INFO: [Opt 31-389] Phase Retarget created 35 cells and removed 488 cells
+INFO: [Opt 31-1021] In phase Retarget, 279 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
+Phase 4 Constant propagation | Checksum: 22eb706f7
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:58 . Memory (MB): peak = 4122.617 ; gain = 100.508 ; free physical = 45365 ; free virtual = 60107
+Constant propagation | Checksum: 22eb706f7
+INFO: [Opt 31-389] Phase Constant propagation created 347 cells and removed 1242 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 277 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4122.617 ; gain = 0.000 ; free physical = 45366 ; free virtual = 60108
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4122.617 ; gain = 0.000 ; free physical = 45367 ; free virtual = 60109
+Phase 5 Sweep | Checksum: 20a9ae7ef
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:59 . Memory (MB): peak = 4122.617 ; gain = 100.508 ; free physical = 45368 ; free virtual = 60110
+Sweep | Checksum: 20a9ae7ef
+INFO: [Opt 31-389] Phase Sweep created 8 cells and removed 5153 cells
+INFO: [Opt 31-1021] In phase Sweep, 2812 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+INFO: [Opt 31-274] Optimized connectivity to 1 cascaded buffer cells
+Phase 6 BUFG optimization | Checksum: 186aaf2fd
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:59 . Memory (MB): peak = 4154.633 ; gain = 132.523 ; free physical = 45367 ; free virtual = 60109
+BUFG optimization | Checksum: 186aaf2fd
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 2 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 186aaf2fd
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:59 . Memory (MB): peak = 4154.633 ; gain = 132.523 ; free physical = 45367 ; free virtual = 60109
+Shift Register Optimization | Checksum: 186aaf2fd
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+INFO: [Opt 31-1566] Pulled 1 inverters resulting in an inversion of 1 pins
+Phase 8 Post Processing Netlist | Checksum: 16ec40950
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:59 . Memory (MB): peak = 4154.633 ; gain = 132.523 ; free physical = 45367 ; free virtual = 60109
+Post Processing Netlist | Checksum: 16ec40950
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 430 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 24a0338c7
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:01:00 . Memory (MB): peak = 4154.633 ; gain = 132.523 ; free physical = 45368 ; free virtual = 60110
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 4154.633 ; gain = 0.000 ; free physical = 45368 ; free virtual = 60110
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 24a0338c7
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:01:00 . Memory (MB): peak = 4154.633 ; gain = 132.523 ; free physical = 45368 ; free virtual = 60110
+Phase 9 Finalization | Checksum: 24a0338c7
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:01:00 . Memory (MB): peak = 4154.633 ; gain = 132.523 ; free physical = 45368 ; free virtual = 60110
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              35  |             488  |                                            279  |
+|  Constant propagation         |             347  |            1242  |                                            277  |
+|  Sweep                        |               8  |            5153  |                                           2812  |
+|  BUFG optimization            |               0  |               2  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               1  |                                            430  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 24a0338c7
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:01:00 . Memory (MB): peak = 4154.633 ; gain = 132.523 ; free physical = 45368 ; free virtual = 60110
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Power 33-23] Power model is not available for xiphy_riu_or
+INFO: [Power 33-23] Power model is not available for genVref.u_hpio_vref
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'system_gmii_to_rgmii_0_0_rgmii_rx_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:7]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 26 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 52
+Ending PowerOpt Patch Enables Task | Checksum: 24a0338c7
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.23 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45302 ; free virtual = 60048
+Ending Power Optimization Task | Checksum: 24a0338c7
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 4322.684 ; gain = 168.051 ; free physical = 45302 ; free virtual = 60049
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 24a0338c7
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45302 ; free virtual = 60049
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45302 ; free virtual = 60049
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+106 Infos, 86 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:06 . Memory (MB): peak = 4322.684 ; gain = 711.328 ; free physical = 45302 ; free virtual = 60049
+INFO: [Vivado 12-24828] Executing command : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+Command: report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1/system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45306 ; free virtual = 60053
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45306 ; free virtual = 60053
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45302 ; free virtual = 60053
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.1 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45302 ; free virtual = 60054
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45302 ; free virtual = 60055
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45302 ; free virtual = 60055
+Wrote Device Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45302 ; free virtual = 60058
+Write Physdb Complete: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.13 . Memory (MB): peak = 4322.684 ; gain = 0.000 ; free physical = 45302 ; free virtual = 60058
+INFO: [Common 17-1381] The checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1/system_wrapper_opt.dcp' has been generated.
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'system_gmii_to_rgmii_0_0_rgmii_rx_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:7]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 48 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4553.902 ; gain = 0.000 ; free physical = 45273 ; free virtual = 60032
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1afaa7da3
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4553.902 ; gain = 0.000 ; free physical = 45273 ; free virtual = 60032
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4553.902 ; gain = 0.000 ; free physical = 45273 ; free virtual = 60032
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Place 30-1907] system_i/gmii_to_rgmii_0/U0/i_system_gmii_to_rgmii_0_0_idelayctrl_REPLICATED_0 replication was created for system_i/gmii_to_rgmii_0/U0/i_system_gmii_to_rgmii_0_0_idelayctrl IDELAYCTRL
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 2402615f5
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 4688.262 ; gain = 134.359 ; free physical = 44839 ; free virtual = 59711
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 2899cf79b
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 4720.277 ; gain = 166.375 ; free physical = 44848 ; free virtual = 59722
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2899cf79b
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 4720.277 ; gain = 166.375 ; free physical = 44849 ; free virtual = 59724
+Phase 1 Placer Initialization | Checksum: 2899cf79b
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 4720.277 ; gain = 166.375 ; free physical = 44849 ; free virtual = 59724
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 3111efc09
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 4720.277 ; gain = 166.375 ; free physical = 44772 ; free virtual = 59647
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+INFO: [Place 30-3162] Check ILP status : ILP-based clock placer completed successfully.
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 270ebf536
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 4720.277 ; gain = 166.375 ; free physical = 44772 ; free virtual = 59648
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 270ebf536
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:18 . Memory (MB): peak = 4917.262 ; gain = 363.359 ; free physical = 44015 ; free virtual = 59318
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 2440c64ac
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 4949.277 ; gain = 395.375 ; free physical = 44003 ; free virtual = 59306
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 2440c64ac
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 4949.277 ; gain = 395.375 ; free physical = 44003 ; free virtual = 59306
+Phase 2.1.1 Partition Driven Placement | Checksum: 2440c64ac
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 4949.277 ; gain = 395.375 ; free physical = 44003 ; free virtual = 59306
+Phase 2.1 Floorplanning | Checksum: 2440c64ac
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 4949.277 ; gain = 395.375 ; free physical = 44003 ; free virtual = 59306
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 2440c64ac
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 4949.277 ; gain = 395.375 ; free physical = 44003 ; free virtual = 59306
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 2440c64ac
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:19 . Memory (MB): peak = 4949.277 ; gain = 395.375 ; free physical = 44003 ; free virtual = 59306
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 2e2fba07a
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:35 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 43951 ; free virtual = 59255
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 2339a1e1e
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:36 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 43951 ; free virtual = 59255
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 8 LUTNM shape to break, 1492 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 5, two critical 3, total 8, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 609 nets or LUTs. Breaked 8 LUTs, combined 601 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-1030] Pass 1. Identified 5 candidate driver sets for equivalent driver rewiring.
+INFO: [Physopt 32-661] Optimized 5 nets.  Re-placed 44 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 5 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 44 existing cells
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 5028.281 ; gain = 0.000 ; free physical = 43967 ; free virtual = 59273
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1401] No candidate cells found for Shift Register optimization.
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5028.281 ; gain = 0.000 ; free physical = 43967 ; free virtual = 59273
+INFO: [Physopt 32-46] Identified 3 candidate nets for critical-cell optimization.
+WARNING: [Netlist 29-47] Cannot modify dont-touch cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy'.
+INFO: [Physopt 32-1483] Netlist edit fails for net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[34]_repN and pin system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/generate_block1.u_ddr_xiphy/byte_num[0].xiphy_byte_wrapper.u_xiphy_byte_wrapper/I_BITSLICE_LOWER[2].GEN_RXTX_BITSLICE_EN.u_xiphy_bitslice_lower/xiphy_rxtx_bitslice/D[2]. Please check constraints such as DONT_TOUCH on the instance, net and hierarchical instance between driver and loads.
+WARNING: [Netlist 29-47] Cannot modify dont-touch cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy'.
+INFO: [Physopt 32-1483] Netlist edit fails for net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[34]_repN and pin system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/generate_block1.u_ddr_xiphy/byte_num[0].xiphy_byte_wrapper.u_xiphy_byte_wrapper/I_BITSLICE_LOWER[2].GEN_RXTX_BITSLICE_EN.u_xiphy_bitslice_lower/xiphy_rxtx_bitslice/D[1]. Please check constraints such as DONT_TOUCH on the instance, net and hierarchical instance between driver and loads.
+INFO: [Physopt 32-571] Net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[34] was not replicated.
+WARNING: [Netlist 29-47] Cannot modify dont-touch cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy'.
+INFO: [Physopt 32-1483] Netlist edit fails for net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[36]_repN and pin system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/generate_block1.u_ddr_xiphy/byte_num[0].xiphy_byte_wrapper.u_xiphy_byte_wrapper/I_BITSLICE_LOWER[2].GEN_RXTX_BITSLICE_EN.u_xiphy_bitslice_lower/xiphy_rxtx_bitslice/D[5]. Please check constraints such as DONT_TOUCH on the instance, net and hierarchical instance between driver and loads.
+WARNING: [Netlist 29-47] Cannot modify dont-touch cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy'.
+INFO: [Physopt 32-1483] Netlist edit fails for net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[36]_repN and pin system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/generate_block1.u_ddr_xiphy/byte_num[0].xiphy_byte_wrapper.u_xiphy_byte_wrapper/I_BITSLICE_LOWER[2].GEN_RXTX_BITSLICE_EN.u_xiphy_bitslice_lower/xiphy_rxtx_bitslice/D[6]. Please check constraints such as DONT_TOUCH on the instance, net and hierarchical instance between driver and loads.
+INFO: [Physopt 32-571] Net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[36] was not replicated.
+WARNING: [Netlist 29-47] Cannot modify dont-touch cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy'.
+INFO: [Physopt 32-1483] Netlist edit fails for net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[11]_repN and pin system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/generate_block1.u_ddr_xiphy/byte_num[1].xiphy_byte_wrapper.u_xiphy_byte_wrapper/I_BITSLICE_LOWER[2].GEN_RXTX_BITSLICE_EN.u_xiphy_bitslice_lower/xiphy_rxtx_bitslice/D[2]. Please check constraints such as DONT_TOUCH on the instance, net and hierarchical instance between driver and loads.
+WARNING: [Netlist 29-47] Cannot modify dont-touch cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy'.
+INFO: [Physopt 32-1483] Netlist edit fails for net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[11]_repN and pin system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/generate_block1.u_ddr_xiphy/byte_num[1].xiphy_byte_wrapper.u_xiphy_byte_wrapper/I_BITSLICE_LOWER[2].GEN_RXTX_BITSLICE_EN.u_xiphy_bitslice_lower/xiphy_rxtx_bitslice/D[5]. Please check constraints such as DONT_TOUCH on the instance, net and hierarchical instance between driver and loads.
+WARNING: [Netlist 29-47] Cannot modify dont-touch cell 'system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy'.
+INFO: [Physopt 32-1483] Netlist edit fails for net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[11]_repN and pin system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/generate_block1.u_ddr_xiphy/byte_num[1].xiphy_byte_wrapper.u_xiphy_byte_wrapper/I_BITSLICE_LOWER[2].GEN_RXTX_BITSLICE_EN.u_xiphy_bitslice_lower/xiphy_rxtx_bitslice/D[1]. Please check constraints such as DONT_TOUCH on the instance, net and hierarchical instance between driver and loads.
+INFO: [Physopt 32-571] Net system_i/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/mcal_ADR[11] was not replicated.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5028.281 ; gain = 0.000 ; free physical = 43967 ; free virtual = 59273
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            8  |            601  |                   609  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                     5  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Cell                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            8  |            601  |                   614  |           0  |          11  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 259aac7ce
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:00:39 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 43968 ; free virtual = 59275
+Phase 2.5 Global Place Phase2 | Checksum: 1991bd192
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:41 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 43991 ; free virtual = 59297
+Phase 2 Global Placement | Checksum: 1991bd192
+
+Time (s): cpu = 00:01:37 ; elapsed = 00:00:41 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 43990 ; free virtual = 59297
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 188751d72
+
+Time (s): cpu = 00:01:44 ; elapsed = 00:00:43 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 43990 ; free virtual = 59297
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1a54d4996
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:00:44 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 43992 ; free virtual = 59300
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: c46c10c4
+
+Time (s): cpu = 00:02:00 ; elapsed = 00:00:48 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44037 ; free virtual = 59309
+
+Phase 3.3.2 Slice Area Swap
+
+Phase 3.3.2.1 Slice Area Swap Initial
+Phase 3.3.2.1 Slice Area Swap Initial | Checksum: 145031894
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:00:49 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44042 ; free virtual = 59315
+Phase 3.3.2 Slice Area Swap | Checksum: 145031894
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:00:49 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44043 ; free virtual = 59316
+Phase 3.3 Small Shape DP | Checksum: 14ff45cdf
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:50 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44044 ; free virtual = 59317
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: f1ada1af
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:00:51 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44045 ; free virtual = 59318
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: ce1cf014
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:00:51 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44045 ; free virtual = 59318
+Phase 3 Detail Placement | Checksum: ce1cf014
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:00:51 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44045 ; free virtual = 59318
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'system_gmii_to_rgmii_0_0_rgmii_rx_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:7]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 85136527
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.322 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: b98376c7
+
+Time (s): cpu = 00:00:00.97 ; elapsed = 00:00:00.28 . Memory (MB): peak = 5028.281 ; gain = 0.000 ; free physical = 44054 ; free virtual = 59327
+INFO: [Place 46-35] Processed net system_i/rst_ps8_0_99M/U0/peripheral_aresetn[0], inserted BUFG to drive 1751 loads.
+INFO: [Place 46-45] Replicated bufg driver system_i/rst_ps8_0_99M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_replica
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 1, Replicated BUFG Driver: 1, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1a8ca524e
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.68 . Memory (MB): peak = 5028.281 ; gain = 0.000 ; free physical = 44058 ; free virtual = 59332
+Phase 4.1.1.1 BUFG Insertion | Checksum: 24bb78ce2
+
+Time (s): cpu = 00:02:24 ; elapsed = 00:00:57 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44058 ; free virtual = 59332
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.322. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 2276563b6
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:00:58 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44060 ; free virtual = 59334
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:00:58 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44060 ; free virtual = 59334
+Phase 4.1 Post Commit Optimization | Checksum: 213b896f8
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:00:58 . Memory (MB): peak = 5028.281 ; gain = 474.379 ; free physical = 44060 ; free virtual = 59333
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43978 ; free virtual = 59252
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 29d1a6b14
+
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:01 . Memory (MB): peak = 5066.262 ; gain = 512.359 ; free physical = 43978 ; free virtual = 59252
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                1x1|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 29d1a6b14
+
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:01 . Memory (MB): peak = 5066.262 ; gain = 512.359 ; free physical = 43978 ; free virtual = 59252
+Phase 4.3 Placer Reporting | Checksum: 29d1a6b14
+
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:01 . Memory (MB): peak = 5066.262 ; gain = 512.359 ; free physical = 43978 ; free virtual = 59252
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43978 ; free virtual = 59252
+
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:01 . Memory (MB): peak = 5066.262 ; gain = 512.359 ; free physical = 43978 ; free virtual = 59252
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 323f3fccb
+
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:01 . Memory (MB): peak = 5066.262 ; gain = 512.359 ; free physical = 43979 ; free virtual = 59252
+Ending Placer Task | Checksum: 26bff93be
+
+Time (s): cpu = 00:02:32 ; elapsed = 00:01:01 . Memory (MB): peak = 5066.262 ; gain = 512.359 ; free physical = 43979 ; free virtual = 59252
+169 Infos, 93 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:37 ; elapsed = 00:01:03 . Memory (MB): peak = 5066.262 ; gain = 743.578 ; free physical = 43979 ; free virtual = 59252
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file system_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.18 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43941 ; free virtual = 59215
+INFO: [Vivado 12-24828] Executing command : report_io -file system_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.21 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43953 ; free virtual = 59227
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_placed.rpt -pb system_wrapper_utilization_placed.pb
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43945 ; free virtual = 59220
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43945 ; free virtual = 59220
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.07 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43943 ; free virtual = 59224
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.11 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43942 ; free virtual = 59225
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.43 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43899 ; free virtual = 59213
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43899 ; free virtual = 59217
+Wrote Device Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43895 ; free virtual = 59217
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.6 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43895 ; free virtual = 59217
+INFO: [Common 17-1381] The checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1/system_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43887 ; free virtual = 59180
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 0.324 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+180 Infos, 93 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43886 ; free virtual = 59179
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43886 ; free virtual = 59179
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.08 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43879 ; free virtual = 59178
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.43 ; elapsed = 00:00:00.09 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43879 ; free virtual = 59180
+Wrote PlaceStorage: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.45 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43852 ; free virtual = 59184
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43852 ; free virtual = 59188
+Wrote Device Cache: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43849 ; free virtual = 59188
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.62 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43849 ; free virtual = 59188
+INFO: [Common 17-1381] The checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1/system_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: a9b4c37b ConstDB: 0 ShapeSum: da3d1447 RouteDB: e80dbbfc
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.19 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43876 ; free virtual = 59189
+Post Restoration Checksum: NetGraph: c06e960e | NumContArr: d9f068a7 | Constraints: e0f12cd3 | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 33df92625
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:02 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43886 ; free virtual = 59200
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 33df92625
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:02 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43886 ; free virtual = 59200
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 33df92625
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:02 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43886 ; free virtual = 59201
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 2b14727e9
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43890 ; free virtual = 59206
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 2f627c929
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:05 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43906 ; free virtual = 59221
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.302  | TNS=0.000  | WHS=-0.167 | THS=-12.791|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 203e99fbc
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:07 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43913 ; free virtual = 59228
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.302  | TNS=0.000  | WHS=-0.211 | THS=-5.908 |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 234f94f6a
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:07 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43913 ; free virtual = 59228
+
+Phase 2.6 Soft Constraint Pins - Fast Budgeting
+Phase 2.6 Soft Constraint Pins - Fast Budgeting | Checksum: 234f94f6a
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:08 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43913 ; free virtual = 59228
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00286071 %
+  Global Horizontal Routing Utilization  = 0.000656685 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 45936
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 37530
+  Number of Partially Routed Nets     = 8406
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 29d22ef59
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:08 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43913 ; free virtual = 59229
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 29d22ef59
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:08 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43913 ; free virtual = 59229
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 2612a8bc5
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:10 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43917 ; free virtual = 59233
+Phase 4 Initial Routing | Checksum: 26cecfc70
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:10 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43917 ; free virtual = 59233
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 7761
+ Number of Nodes with overlaps = 634
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.306  | TNS=0.000  | WHS=-0.024 | THS=-0.055 |
+
+Phase 5.1 Global Iteration 0 | Checksum: 1d129fb43
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:20 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43932 ; free virtual = 59248
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.306  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 20854f14a
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:22 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43933 ; free virtual = 59249
+Phase 5 Rip-up And Reroute | Checksum: 20854f14a
+
+Time (s): cpu = 00:01:06 ; elapsed = 00:00:22 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43933 ; free virtual = 59249
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.306  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.306  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 6.1 Delay CleanUp | Checksum: 176db1b04
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:23 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43933 ; free virtual = 59249
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 176db1b04
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:23 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43933 ; free virtual = 59249
+Phase 6 Delay and Skew Optimization | Checksum: 176db1b04
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:23 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43933 ; free virtual = 59249
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.306  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 1f401057d
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:24 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43932 ; free virtual = 59248
+Phase 7 Post Hold Fix | Checksum: 1f401057d
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:24 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43932 ; free virtual = 59248
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 6.81675 %
+  Global Horizontal Routing Utilization  = 7.99506 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 1f401057d
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:24 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43932 ; free virtual = 59248
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 1f401057d
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:24 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43932 ; free virtual = 59248
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 1f401057d
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:25 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43933 ; free virtual = 59249
+
+Phase 11 Resolve XTalk
+Phase 11 Resolve XTalk | Checksum: 268dd6113
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:25 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43933 ; free virtual = 59249
+
+Phase 12 Post Process Routing
+Phase 12 Post Process Routing | Checksum: 268dd6113
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:25 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43933 ; free virtual = 59249
+
+Phase 13 Post Router Timing
+
+Phase 13.1 Update Timing
+Phase 13.1 Update Timing | Checksum: 268dd6113
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:26 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43914 ; free virtual = 59230
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.306  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 13 Post Router Timing | Checksum: 268dd6113
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:26 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43914 ; free virtual = 59230
+Total Elapsed time in route_design: 25.74 secs
+
+Phase 14 Post-Route Event Processing
+Phase 14 Post-Route Event Processing | Checksum: 20f7733b2
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:26 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43914 ; free virtual = 59230
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 20f7733b2
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:26 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43914 ; free virtual = 59230
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+195 Infos, 93 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:19 ; elapsed = 00:00:26 . Memory (MB): peak = 5066.262 ; gain = 0.000 ; free physical = 43914 ; free virtual = 59230
+INFO: [Vivado 12-24828] Executing command : report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
+Command: report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1/system_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'system_gmii_to_rgmii_0_0_rgmii_rx_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:7]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1/system_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file system_wrapper_timing_summary_routed.rpt -pb system_wrapper_timing_summary_routed.pb -rpx system_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'system_gmii_to_rgmii_0_0_rgmii_rx_clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_gmii_to_rgmii_0_0/synth/system_gmii_to_rgmii_0_0_clocks.xdc:7]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [Vivado 12-24838] Running report commands "report_bus_skew, report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file system_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file system_wrapper_bus_skew_routed.rpt -pb system_wrapper_bus_skew_routed.pb -rpx system_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24828] Executing command : report_route_status -file system_wrapper_route_status.rpt -pb system_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+Command: report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+217 Infos, 95 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 5106.281 ; gain = 40.020 ; free physical = 43879 ; free virtual = 59219
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file system_wrapper_clock_utilization_routed.rpt
+generate_parallel_reports: Time (s): cpu = 00:00:38 ; elapsed = 00:00:16 . Memory (MB): peak = 5106.281 ; gain = 40.020 ; free physical = 43869 ; free virtual = 59209
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43868 ; free virtual = 59209
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43868 ; free virtual = 59209
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.06 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43858 ; free virtual = 59204
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.22 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43837 ; free virtual = 59200
+Wrote PlaceStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.43 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43806 ; free virtual = 59194
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43790 ; free virtual = 59182
+Wrote Device Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43790 ; free virtual = 59185
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.71 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43790 ; free virtual = 59185
+INFO: [Common 17-1381] The checkpoint '/home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.runs/impl_1/system_wrapper_routed.dcp' has been generated.
+Command: write_bitstream -force system_wrapper.bit
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xczu2cg'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Generating merged BMM file for the design top 'system_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /home/scimos/work/claude/projects/pz_zu2cg_linux/pz_zu2cg_linux.gen/sources_1/bd/system/ip/system_ddr4_0_0/sw/calibration_0/Debug/calibration_ddr.elf 
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Initializing bitstream generation complete. Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.24 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43865 ; free virtual = 59227
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./system_wrapper.bit...
+Generate Bitstream complete. Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43857 ; free virtual = 59227
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+229 Infos, 95 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:12 ; elapsed = 00:00:34 . Memory (MB): peak = 5106.281 ; gain = 0.000 ; free physical = 43842 ; free virtual = 59212
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 13 23:54:37 2026...

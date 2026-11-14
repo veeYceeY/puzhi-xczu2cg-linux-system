@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<board schema_version="2.2" vendor="puzhitech.com" name="pz_zu2cg" display_name="Puzhi PZ-ZU2CG Development Board" url="www.puzhitech.com" preset_file="preset.xml">
+  <images>
+    <image name="pz_zu2cg_board.jpg" display_name="PZ-ZU2CG Board" sub_type="board">
+      <description>PZ-ZU2CG board image</description>
+    </image>
+  </images>
+  <compatible_board_revisions>
+    <revision id="0">1.0</revision>
+  </compatible_board_revisions>
+  <file_version>1.0</file_version>
+  <description>Puzhi ZYNQ UltraScale+ MPSoC development board with XCZU2CG-2SFVC784I SOM: 4 GB PS DDR4, 1 GB PL DDR4, 8 GB eMMC, 32 MB QSPI, PS + PL Gigabit Ethernet, USB 3.0, Mini DP, M.2 NVMe, SD, UART, RS485, CAN.</description>
+  <components>
+    <component name="part0" display_name="PZ-ZU2CG" type="fpga" part_name="xczu2cg-sfvc784-2-i" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="www.puzhitech.com">
+      <description>XCZU2CG-2SFVC784I on the Puzhi ZU2/3/4/5 core board</description>
+      <interfaces>
+        <interface mode="master" name="ps8_fixedio" type="xilinx.com:zynq_ultra_ps_e:fixedio_rtl:1.0" of_component="ps8_fixedio" preset_proc="zynq_ultra_ps_e_preset">
+          <description>Zynq UltraScale+ PS configuration (DDR4, QSPI, eMMC, SD, GEM0, USB3, DP, PCIe/NVMe, UART, CAN)</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="zynq_ultra_ps_e" order="0"/>
+          </preferred_ips>
+        </interface>
+        <interface mode="slave" name="sys_diff_clock" type="xilinx.com:interface:diff_clock_rtl:1.0" of_component="sys_diff_clock" preset_proc="sys_diff_clock_preset">
+          <parameters>
+            <parameter name="frequency" value="200000000"/>
+          </parameters>
+          <description>200 MHz differential system clock (bank 65)</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="clk_wiz" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="ddr4" order="1"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="util_ds_buf" order="2"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="CLK_P" physical_port="sys_clk_p" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="sys_clk_p"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="CLK_N" physical_port="sys_clk_n" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="sys_clk_n"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        <interface mode="slave" name="reset" type="xilinx.com:signal:reset_rtl:1.0" of_component="reset" preset_proc="reset_preset">
+          <parameters>
+            <parameter name="rst_polarity" value="0"/>
+          </parameters>
+          <description>Global reset (core + carrier reset keys / MAX811 output), active low</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="proc_sys_reset" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="clk_wiz" order="1"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="ddr4" order="2"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="RESET" physical_port="reset_n" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="reset_n"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        <interface mode="master" name="led_5bits" type="xilinx.com:interface:gpio_rtl:1.0" of_component="led_5bits" preset_proc="led_5bits_preset">
+          <description>Carrier board LEDs 1-5, active high (bank 44, 3.3 V)</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="TRI_O" physical_port="led_5bits_tri_o" dir="out" left="4" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="led_5bits_tri_o_0"/>
+                <pin_map port_index="1" component_pin="led_5bits_tri_o_1"/>
+                <pin_map port_index="2" component_pin="led_5bits_tri_o_2"/>
+                <pin_map port_index="3" component_pin="led_5bits_tri_o_3"/>
+                <pin_map port_index="4" component_pin="led_5bits_tri_o_4"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        <interface mode="master" name="led_core" type="xilinx.com:interface:gpio_rtl:1.0" of_component="led_core" preset_proc="led_core_preset">
+          <description>Core board LEDs 1-3, active high (bank 64, 1.8 V)</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="TRI_O" physical_port="led_core_tri_o" dir="out" left="2" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="led_core_tri_o_0"/>
+                <pin_map port_index="1" component_pin="led_core_tri_o_1"/>
+                <pin_map port_index="2" component_pin="led_core_tri_o_2"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        <interface mode="master" name="push_buttons_5bits" type="xilinx.com:interface:gpio_rtl:1.0" of_component="push_buttons_5bits" preset_proc="push_buttons_5bits_preset">
+          <description>Carrier board keys 1-5, active low (bank 44, 3.3 V)</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="TRI_I" physical_port="push_buttons_5bits_tri_i" dir="in" left="4" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="push_buttons_5bits_tri_i_0"/>
+                <pin_map port_index="1" component_pin="push_buttons_5bits_tri_i_1"/>
+                <pin_map port_index="2" component_pin="push_buttons_5bits_tri_i_2"/>
+                <pin_map port_index="3" component_pin="push_buttons_5bits_tri_i_3"/>
+                <pin_map port_index="4" component_pin="push_buttons_5bits_tri_i_4"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        <interface mode="master" name="iic_eeprom" type="xilinx.com:interface:iic_rtl:1.0" of_component="iic_eeprom">
+          <description>I2C bus to AT24C64 EEPROM (7-bit address 0x50)</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_iic" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="SCL_I" physical_port="iic_eeprom_scl_i" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="iic_eeprom_scl_io"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="SCL_O" physical_port="iic_eeprom_scl_o" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="iic_eeprom_scl_io"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="SCL_T" physical_port="iic_eeprom_scl_t" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="iic_eeprom_scl_io"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="SDA_I" physical_port="iic_eeprom_sda_i" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="iic_eeprom_sda_io"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="SDA_O" physical_port="iic_eeprom_sda_o" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="iic_eeprom_sda_io"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="SDA_T" physical_port="iic_eeprom_sda_t" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="iic_eeprom_sda_io"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        <interface mode="master" name="rgmii" type="xilinx.com:interface:rgmii_rtl:1.0" of_component="phy_pl" preset_proc="rgmii_preset">
+          <description>PL Gigabit Ethernet RGMII to KSZ9031 (bank 66, 1.8 V)</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernet" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="gmii_to_rgmii" order="1"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="TD" physical_port="rgmii_td" dir="out" left="3" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="rgmii_td_0"/>
+                <pin_map port_index="1" component_pin="rgmii_td_1"/>
+                <pin_map port_index="2" component_pin="rgmii_td_2"/>
+                <pin_map port_index="3" component_pin="rgmii_td_3"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="TX_CTL" physical_port="rgmii_tx_ctl" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="rgmii_tx_ctl"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="TXC" physical_port="rgmii_txc" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="rgmii_txc"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="RD" physical_port="rgmii_rd" dir="in" left="3" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="rgmii_rd_0"/>
+                <pin_map port_index="1" component_pin="rgmii_rd_1"/>
+                <pin_map port_index="2" component_pin="rgmii_rd_2"/>
+                <pin_map port_index="3" component_pin="rgmii_rd_3"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="RX_CTL" physical_port="rgmii_rx_ctl" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="rgmii_rx_ctl"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="RXC" physical_port="rgmii_rxc" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="rgmii_rxc"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        <interface mode="master" name="mdio_mdc" type="xilinx.com:interface:mdio_rtl:1.0" of_component="phy_pl">
+          <description>PL Ethernet PHY management (MDIO/MDC)</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernet" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="gmii_to_rgmii" order="1"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="MDC" physical_port="mdio_mdc" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="mdio_mdc"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="MDIO_I" physical_port="mdio_mdio_i" dir="in">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="mdio_mdio_io"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="MDIO_O" physical_port="mdio_mdio_o" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="mdio_mdio_io"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="MDIO_T" physical_port="mdio_mdio_t" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="mdio_mdio_io"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        <interface mode="master" name="phy_reset_out" type="xilinx.com:signal:reset_rtl:1.0" of_component="phy_pl">
+          <parameters>
+            <parameter name="rst_polarity" value="0"/>
+          </parameters>
+          <description>PL Ethernet PHY reset, active low</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="axi_ethernet" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="RESET" physical_port="phy_reset_n" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="phy_reset_n"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+        <interface mode="master" name="ddr4_sdram" type="xilinx.com:interface:ddr4_rtl:1.0" of_component="ddr4_sdram" preset_proc="ddr4_sdram_preset">
+          <description>PL DDR4 SDRAM, 1 GB, 16-bit, 2400 MT/s (bank 65)</description>
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="ddr4" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="ACT_N" physical_port="c0_ddr4_act_n" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_act_n"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="ADR" physical_port="c0_ddr4_adr" dir="out" left="16" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_adr0"/>
+                <pin_map port_index="1" component_pin="c0_ddr4_adr1"/>
+                <pin_map port_index="2" component_pin="c0_ddr4_adr2"/>
+                <pin_map port_index="3" component_pin="c0_ddr4_adr3"/>
+                <pin_map port_index="4" component_pin="c0_ddr4_adr4"/>
+                <pin_map port_index="5" component_pin="c0_ddr4_adr5"/>
+                <pin_map port_index="6" component_pin="c0_ddr4_adr6"/>
+                <pin_map port_index="7" component_pin="c0_ddr4_adr7"/>
+                <pin_map port_index="8" component_pin="c0_ddr4_adr8"/>
+                <pin_map port_index="9" component_pin="c0_ddr4_adr9"/>
+                <pin_map port_index="10" component_pin="c0_ddr4_adr10"/>
+                <pin_map port_index="11" component_pin="c0_ddr4_adr11"/>
+                <pin_map port_index="12" component_pin="c0_ddr4_adr12"/>
+                <pin_map port_index="13" component_pin="c0_ddr4_adr13"/>
+                <pin_map port_index="14" component_pin="c0_ddr4_adr14"/>
+                <pin_map port_index="15" component_pin="c0_ddr4_adr15"/>
+                <pin_map port_index="16" component_pin="c0_ddr4_adr16"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="BA" physical_port="c0_ddr4_ba" dir="out" left="1" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_ba0"/>
+                <pin_map port_index="1" component_pin="c0_ddr4_ba1"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="BG" physical_port="c0_ddr4_bg" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_bg0"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="CK_C" physical_port="c0_ddr4_ck_c" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_ck_c"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="CK_T" physical_port="c0_ddr4_ck_t" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_ck_t"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="CKE" physical_port="c0_ddr4_cke" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_cke"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="CS_N" physical_port="c0_ddr4_cs_n" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_cs_n"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="DM_N" physical_port="c0_ddr4_dm_n" dir="inout" left="1" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_dm_n0"/>
+                <pin_map port_index="1" component_pin="c0_ddr4_dm_n1"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="DQ" physical_port="c0_ddr4_dq" dir="inout" left="15" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_dq0"/>
+                <pin_map port_index="1" component_pin="c0_ddr4_dq1"/>
+                <pin_map port_index="2" component_pin="c0_ddr4_dq2"/>
+                <pin_map port_index="3" component_pin="c0_ddr4_dq3"/>
+                <pin_map port_index="4" component_pin="c0_ddr4_dq4"/>
+                <pin_map port_index="5" component_pin="c0_ddr4_dq5"/>
+                <pin_map port_index="6" component_pin="c0_ddr4_dq6"/>
+                <pin_map port_index="7" component_pin="c0_ddr4_dq7"/>
+                <pin_map port_index="8" component_pin="c0_ddr4_dq8"/>
+                <pin_map port_index="9" component_pin="c0_ddr4_dq9"/>
+                <pin_map port_index="10" component_pin="c0_ddr4_dq10"/>
+                <pin_map port_index="11" component_pin="c0_ddr4_dq11"/>
+                <pin_map port_index="12" component_pin="c0_ddr4_dq12"/>
+                <pin_map port_index="13" component_pin="c0_ddr4_dq13"/>
+                <pin_map port_index="14" component_pin="c0_ddr4_dq14"/>
+                <pin_map port_index="15" component_pin="c0_ddr4_dq15"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="DQS_C" physical_port="c0_ddr4_dqs_c" dir="inout" left="1" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_dqs_c0"/>
+                <pin_map port_index="1" component_pin="c0_ddr4_dqs_c1"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="DQS_T" physical_port="c0_ddr4_dqs_t" dir="inout" left="1" right="0">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_dqs_t0"/>
+                <pin_map port_index="1" component_pin="c0_ddr4_dqs_t1"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="ODT" physical_port="c0_ddr4_odt" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_odt"/>
+              </pin_maps>
+            </port_map>
+            <port_map logical_port="RESET_N" physical_port="c0_ddr4_reset_n" dir="out">
+              <pin_maps>
+                <pin_map port_index="0" component_pin="c0_ddr4_reset_n"/>
+              </pin_maps>
+            </port_map>
+          </port_maps>
+        </interface>
+      </interfaces>
+    </component>
+    <component name="ps8_fixedio" display_name="PS8 fixed IO" type="chip" sub_type="fixed_io" major_group=""/>
+    <component name="sys_diff_clock" display_name="System differential clock 200 MHz" type="chip" sub_type="system_clock" major_group="Clock Sources">
+      <description>200 MHz active differential oscillator on the core board, bank 65 L3/L2</description>
+      <parameters>
+        <parameter name="frequency" value="200000000"/>
+      </parameters>
+    </component>
+    <component name="reset" display_name="FPGA Reset" type="chip" sub_type="system_reset" major_group="Reset">
+      <description>Global reset, active low (IO_T1U_66, D2)</description>
+    </component>
+    <component name="led_5bits" display_name="Carrier LEDs" type="chip" sub_type="led" major_group="General Purpose Input or Output">
+      <description>Carrier board LEDs 1-5, active high</description>
+    </component>
+    <component name="led_core" display_name="Core board LEDs" type="chip" sub_type="led" major_group="General Purpose Input or Output">
+      <description>Core board LEDs 1-3, active high</description>
+    </component>
+    <component name="push_buttons_5bits" display_name="Push buttons" type="chip" sub_type="push_button" major_group="General Purpose Input or Output">
+      <description>Carrier board keys 1-5, active low</description>
+    </component>
+    <component name="iic_eeprom" display_name="EEPROM (I2C)" type="chip" sub_type="memory" major_group="Miscellaneous" part_name="AT24C64D-SSHM-T" vendor="Microchip">
+      <description>64 Kbit I2C EEPROM, 7-bit address 0x50</description>
+    </component>
+    <component name="phy_pl" display_name="PL Ethernet PHY" type="chip" sub_type="ethernet" major_group="Ethernet Configurations" part_name="KSZ9031RNX" vendor="Microchip">
+      <description>KSZ9031 RGMII Gigabit PHY connected to PL bank 66, PHY address 2</description>
+      <parameters>
+        <parameter name="phy_addr" value="2"/>
+      </parameters>
+    </component>
+    <component name="ddr4_sdram" display_name="PL DDR4 SDRAM" type="chip" sub_type="ddr" major_group="External Memory" part_name="MT40A512M16LY-062E" vendor="Micron" spec_url="www.micron.com">
+      <description>1 GB DDR4 component, 16-bit, connected to PL bank 65</description>
+      <parameters>
+        <parameter name="ddr_type" value="ddr4"/>
+        <parameter name="size" value="1GB"/>
+      </parameters>
+    </component>
+  </components>
+  <jtag_chains>
+    <jtag_chain name="chain1">
+      <position name="0" component="part0"/>
+    </jtag_chain>
+  </jtag_chains>
+  <connections>
+    <connection name="part0_sys_diff_clock" component1="part0" component2="sys_diff_clock">
+      <connection_map name="part0_sys_diff_clock_1" typical_delay="5" c1_st_index="0" c1_end_index="1" c2_st_index="0" c2_end_index="1"/>
+    </connection>
+    <connection name="part0_reset" component1="part0" component2="reset">
+      <connection_map name="part0_reset_1" typical_delay="5" c1_st_index="2" c1_end_index="2" c2_st_index="0" c2_end_index="0"/>
+    </connection>
+    <connection name="part0_led_core" component1="part0" component2="led_core">
+      <connection_map name="part0_led_core_1" typical_delay="5" c1_st_index="3" c1_end_index="5" c2_st_index="0" c2_end_index="2"/>
+    </connection>
+    <connection name="part0_led_5bits" component1="part0" component2="led_5bits">
+      <connection_map name="part0_led_5bits_1" typical_delay="5" c1_st_index="6" c1_end_index="10" c2_st_index="0" c2_end_index="4"/>
+    </connection>
+    <connection name="part0_push_buttons_5bits" component1="part0" component2="push_buttons_5bits">
+      <connection_map name="part0_push_buttons_5bits_1" typical_delay="5" c1_st_index="11" c1_end_index="15" c2_st_index="0" c2_end_index="4"/>
+    </connection>
+    <connection name="part0_iic_eeprom" component1="part0" component2="iic_eeprom">
+      <connection_map name="part0_iic_eeprom_1" typical_delay="5" c1_st_index="16" c1_end_index="17" c2_st_index="0" c2_end_index="1"/>
+    </connection>
+    <connection name="part0_phy_pl" component1="part0" component2="phy_pl">
+      <connection_map name="part0_phy_pl_1" typical_delay="5" c1_st_index="18" c1_end_index="32" c2_st_index="0" c2_end_index="14"/>
+    </connection>
+    <connection name="part0_ddr4_sdram" component1="part0" component2="ddr4_sdram">
+      <connection_map name="part0_ddr4_sdram_1" typical_delay="5" c1_st_index="33" c1_end_index="81" c2_st_index="0" c2_end_index="48"/>
+    </connection>
+  </connections>
+</board>

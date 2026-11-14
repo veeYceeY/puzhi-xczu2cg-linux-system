@@ -1,0 +1,183 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Puzhi PZ-ZU2CG: processing-system peripherals, as set by the board preset
+ * (tools/gen_pz_zu2cg.py). Shared by U-Boot (on its own) and Linux (pz-zu2cg.dts,
+ * which adds the PL design). Pin multiplexing is done by psu_init, not here.
+ */
+
+#include "zynqmp.dtsi"
+#include "zynqmp-clk-ccf.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/phy/phy.h>
+
+/ {
+	model = "Puzhi PZ-ZU2CG";
+	compatible = "puzhi,pz-zu2cg", "xlnx,zynqmp";
+
+	aliases {
+		ethernet0 = &gem0;
+		mmc0 = &sdhci0;
+		mmc1 = &sdhci1;
+		rtc0 = &rtc;
+		serial0 = &uart0;
+		serial1 = &uart1;
+		spi0 = &qspi;
+	};
+
+	chosen {
+		bootargs = "earlycon";
+		stdout-path = "serial0:115200n8";
+	};
+
+	/* 4 GB PS DDR4: 2 GB below 4 GB, 2 GB at 32 GB */
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x0 0x0 0x80000000>, <0x8 0x0 0x0 0x80000000>;
+	};
+
+	/* PS-GTR reference clocks from the board oscillators */
+	gtr_refclk0: gtr-refclk0 {		/* PCIe */
+		compatible = "fixed-clock";
+		#clock-cells = <0>;
+		clock-frequency = <100000000>;
+	};
+
+	gtr_refclk1: gtr-refclk1 {		/* USB 3.0 */
+		compatible = "fixed-clock";
+		#clock-cells = <0>;
+		clock-frequency = <26000000>;
+	};
+
+	gtr_refclk2: gtr-refclk2 {		/* DisplayPort */
+		compatible = "fixed-clock";
+		#clock-cells = <0>;
+		clock-frequency = <27000000>;
+	};
+};
+
+&psgtr {
+	status = "okay";
+	clocks = <&gtr_refclk0>, <&gtr_refclk1>, <&gtr_refclk2>;
+	clock-names = "ref0", "ref1", "ref2";
+};
+
+/* UART0: USB-UART (CP2102), MIO 42/43 - console */
+&uart0 {
+	status = "okay";
+};
+
+/* UART1: RS485 (SP3485), MIO 40/41 */
+&uart1 {
+	status = "okay";
+};
+
+/* CAN0 (SN65HVD230), MIO 38/39 */
+&can0 {
+	status = "okay";
+};
+
+/* QSPI: W25Q256JW, single x4, MIO 0-6 */
+&qspi {
+	status = "okay";
+
+	flash@0 {
+		compatible = "jedec,spi-nor";
+		reg = <0>;
+		#address-cells = <1>;
+		#size-cells = <1>;
+		spi-tx-bus-width = <4>;
+		spi-rx-bus-width = <4>;
+		spi-max-frequency = <108000000>;
+	};
+};
+
+/* SD0: 8 GB eMMC, 8 bit, MIO 13-22 */
+&sdhci0 {
+	status = "okay";
+	non-removable;
+	disable-wp;
+	bus-width = <8>;
+	xlnx,mio-bank = <0>;
+};
+
+/* SD1: micro-SD card, 4 bit, MIO 46-51, card detect MIO 45 */
+&sdhci1 {
+	status = "okay";
+	no-1-8-v;
+	disable-wp;
+	bus-width = <4>;
+	xlnx,mio-bank = <1>;
+};
+
+/*
+ * GEM0: RTL8211F on MIO 26-37, MDIO on MIO 76/77, PHY address 1.
+ * The Puzhi manual says KSZ9031, but the board's PHY ID registers read 0x001c/0xc916
+ * (Realtek RTL8211F); checked on hardware 2026-11-14. Its straps enable only the RX delay,
+ * and the PS GEM adds none, so "rgmii-id" is needed: the Realtek driver then turns on the
+ * PHY's 2 ns TX delay too. Without it TX frames are corrupted at any speed.
+ */
+&gem0 {
+	status = "okay";
+	phy-mode = "rgmii-id";
+	phy-handle = <&phy_ps>;
+
+	mdio {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		phy_ps: ethernet-phy@1 {
+			compatible = "ethernet-phy-id001c.c916", "ethernet-phy-ieee802.3-c22";
+			reg = <1>;
+		};
+	};
+};
+
+/* USB0: USB3320 ULPI PHY on MIO 52-63 (reset on MIO 44) + USB 3.0 on GTR lane 1 */
+&usb0 {
+	status = "okay";
+	reset-gpios = <&gpio 44 GPIO_ACTIVE_LOW>;
+	phy-names = "usb3-phy";
+	phys = <&psgtr 1 PHY_TYPE_USB3 0 1>;
+};
+
+&dwc3_0 {
+	status = "okay";
+	dr_mode = "host";
+	snps,usb3_lpm_capable;
+	maximum-speed = "super-speed";
+};
+
+/* PCIe root port x1 on GTR lane 0 (M.2 NVMe), PERST# on MIO 75 */
+&pcie {
+	status = "okay";
+	reset-gpios = <&gpio 75 GPIO_ACTIVE_LOW>;
+	phy-names = "pcie-phy0";
+	phys = <&psgtr 0 PHY_TYPE_PCIE 0 0>;
+};
+
+/* Mini DisplayPort: GTR lanes 3 (ML0) and 2 (ML1); AUX/HPD over EMIO */
+&zynqmp_dpdma {
+	status = "okay";
+};
+
+&zynqmp_dpsub {
+	status = "okay";
+	phy-names = "dp-phy0", "dp-phy1";
+	phys = <&psgtr 3 PHY_TYPE_DP 0 2>, <&psgtr 2 PHY_TYPE_DP 1 2>;
+};
+
+&gpio {
+	status = "okay";
+};
+
+&rtc {
+	status = "okay";
+};
+
+&watchdog0 {
+	status = "okay";
+};
+
+&lpd_watchdog {
+	status = "okay";
+};

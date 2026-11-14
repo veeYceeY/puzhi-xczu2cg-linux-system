@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xczu2cg-sfvc784-2-i" LaunchTime="1794613519">
+  <File Type="VDS-TIMINGSUMMARY" Name="system_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="system_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="system_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="system_wrapper_utilization_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="system_wrapper_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="system_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="system_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="system_wrapper.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="system_wrapper_drc_synth.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/system.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/system_wrapper.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PGENDIR/sources_1/bd/system/hdl/system_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1794613507"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="system_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/pz_zu2cg_linux.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/pz_zu2cg_linux_timing.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="ProcessingOrder" Val="LATE"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2026">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="system_ddr4_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gpio_j19_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_cc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_ds_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_ds_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_ds_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_pc_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rst_ps8_0_99M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_ds_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gpio_led_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gpio_j20_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gpio_key_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_pc_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_pc_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rst_ddr4_0_300M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_ds_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_ds_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gmii_to_rgmii_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_pc_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gpio_jm1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_pc_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_rst_pl_clk1_375M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_gpio_led_core_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ps8_0_axi_periph_imp_auto_ds_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_axi_iic_eeprom_0"/>
+</GenRun>

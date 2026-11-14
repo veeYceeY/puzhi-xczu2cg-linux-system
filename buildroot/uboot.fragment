@@ -1,0 +1,8 @@
+# PZ-ZU2CG device tree (PS only; arch/arm/dts/pz-zu2cg.dts is put there by build_linux.sh)
+CONFIG_DEFAULT_DEVICE_TREE="pz-zu2cg"
+CONFIG_OF_LIST="pz-zu2cg"
+# Load the PL design before Linux starts, because Linux's device tree describes it.
+# Accessing the AXI peripherals without it would hang the bus. Looks on the SD card
+# (mmc 1) and then the eMMC (mmc 0).
+CONFIG_USE_PREBOOT=y
+CONFIG_PREBOOT="if load mmc 1:1 0x10000000 system.bit || load mmc 0:1 0x10000000 system.bit; then fpga loadb 0 0x10000000 ${filesize}; fi; usb start"
